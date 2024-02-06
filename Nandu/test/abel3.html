@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gender Selection</title>
+  </head>
+  <body
+    style="
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    ">
+    <form style="display: flex; flex-direction: column">
+      <label for="male" style="margin-bottom: 10px; font-size: 18px">
+        <input
+          type="radio"
+          id="male"
+          name="gender"
+          value="male"
+          style="margin-right: 5px; display: none" />
+        <span style="cursor: pointer; padding: 5px; border: 1px solid black"
+          >Male</span
+        >
+      </label>
+
+      <label for="female" style="margin-bottom: 10px; font-size: 18px">
+        <input
+          type="radio"
+          id="female"
+          name="gender"
+          value="female"
+          style="margin-right: 5px; display: none" />
+        <span style="cursor: pointer; padding: 5px; border: 1px solid black"
+          >Female</span
+        >
+      </label>
+    </form>
+
+    <style>
+      /* Styles for Male radio button */
+      input[type="radio"][value="male"]:checked + span {
+        background-color: lightblue;
+      }
+
+      /* Styles for Female radio button */
+      input[type="radio"][value="female"]:checked + span {
+        background-color: lightpink;
+      }
+    </style>
+  </body>
+</html>

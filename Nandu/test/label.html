@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gender Selection</title>
+  </head>
+  <body
+    style="
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    ">
+    <form style="display: flex; flex-direction: column">
+      <label
+        for="male"
+        style="margin-bottom: 10px; font-size: 18px; color: black">
+        <input
+          type="radio"
+          id="male"
+          name="gender"
+          value="male"
+          onchange="changeColor('blue')" />
+        Male
+      </label>
+
+      <label
+        for="female"
+        style="margin-bottom: 10px; font-size: 18px; color: black">
+        <input
+          type="radio"
+          id="female"
+          name="gender"
+          value="female"
+          onchange="changeColor('pink')" />
+        Female
+      </label>
+    </form>
+
+    <script>
+      function changeColor(color) {
+        var maleLabel = document.querySelector('label[for="male"]');
+        var femaleLabel = document.querySelector('label[for="female"]');
+
+        if (color === "blue") {
+          maleLabel.style.color = "blue";
+          femaleLabel.style.color = "black";
+        } else if (color === "pink") {
+          femaleLabel.style.color = "pink";
+          maleLabel.style.color = "black";
+        }
+      }
+    </script>
+  </body>
+</html>
